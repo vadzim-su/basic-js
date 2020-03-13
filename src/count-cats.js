@@ -1,4 +1,10 @@
-module.exports = function countCats(/* matrix */) {
-  throw 'Not implemented';
-  // remove line with error and write your code here
+module.exports = function countCats(checkedArray) {
+  let catsValue = 0
+  checkedArray = String(checkedArray).split(',')
+
+  for (let key in checkedArray) {
+    if (checkedArray[key] == '^^') catsValue += 1
+  }
+
+  return catsValue
 };
